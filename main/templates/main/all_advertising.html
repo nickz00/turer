@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+{% include "./helpers/header.html" %}
+<main class="ms-sm-auto px-md-4">
+    <h2>Рассылка рекламы клиентам</h2>
+    <div class="table-responsive">
+        <div class="text-center bg-light">
+            <table class="table table-bordered">
+                <thead class="table-dark table-bordered">
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Для кого</th>
+                    <th scope="col">Текст</th>
+                    <th scope="col">Ответ</th>
+                    <th scope="col">Дата</th>
+                </tr>
+                </thead>
+                <tbody>
+                {%for item in data%}
+                <tr>
+                    <th>{{forloop.counter}}</th>
+                    <td>{{item.for_person}}</td>
+                    <td>{{item.text}}</td>
+                    <td>{{item.response}}</td>
+                    <td>{{item.date}}</td>
+                </tr>
+                {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+

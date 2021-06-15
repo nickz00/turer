@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+{% include "./helpers/header.html" %}
+<main class="ms-sm-auto px-md-4">
+    <h2>Регистрация нового клиента</h2>
+    <div class="container">
+        <main>
+            <div class="row g-3">
+                <div class="col-md-7 col-lg-8">
+                    <form class="needs-validation" novalidate="" method="post">
+                        <div class="col-sm-6">
+                            <label>Фамилия</label>
+                            {{form.surname}}
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Имя</label>
+                            {{form.name}}
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Отчество</label>
+                            {{form.lastname}}
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Почта</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                {{form.email}}
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Телефон</label>
+                            {{form.phone}}
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Серия номер паспорта</label>
+                            {{form.pas_num}}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Кто выдал</label>
+                            {{form.pas_take}}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Адрес регистрации</label>
+                            {{form.pas_reg}}
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Адрес фактического проживания</label>
+                            {{form.adress}}
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Интересы/хобби</label>
+                            {{form.activity}}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Уровень заработной платы</label>
+                            {{form.zp}}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Заказанные туры</label>
+                            {{form.tours}}
+                        </div>
+                <h4 class="mb-3"></h4>
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Зарегистрировать</button>
+                </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2020 ТУР-3</p>
+        </footer>
+    </div>
+</main>
+</body>
+</html>
+

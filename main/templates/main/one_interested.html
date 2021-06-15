@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+{% include "./helpers/header.html" %}
+<main class="ms-sm-auto px-md-4">
+    <h2>Карточка потенциального клиента </h2>
+    <div class="table-responsive">
+        <div class="text-center bg-light">
+            <table class="table table-bordered">
+                    <tbody>
+                    <tr>
+                        <th>Фамилия</th>
+                        <td>
+                            {{data.surname}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Имя</th>
+                        <td>
+                            {{data.name}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Отчество</th>
+                        <td>
+                            {{data.lastname}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Почта</th>
+                        <td>
+                            {{data.email}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Телефон</th>
+                        <td>
+                            {{data.phone}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Комментарий</th>
+                        <td>
+                            {{data.comment}}
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            <p><a type="button" class="btn btn-success" href="/one_interested/change/{{data.id}}">Изменить</a></p>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+

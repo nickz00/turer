@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+{% include "./helpers/header.html" %}
+<main class="ms-sm-auto px-md-4">
+    <h2>Изменение данных клиента</h2>
+    <div class="container">
+        <main>
+            <div class="row g-3">
+                <div class="col-md-7 col-lg-8">
+                    <form class="needs-validation" novalidate="" method="post">
+                        <div class="col-sm-6">
+                            <label>Фамилия</label>
+                            <input name="surname" class="form-control" type="text" value="{{data.surname}}">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Имя</label>
+                            <input name="name" class="form-control"  type="text" value="{{data.name}}">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Отчество</label>
+                            <input name="lastname" class="form-control"  type="text" value="{{data.lastname}}">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Почта</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input name="email" class="form-control"  type="text" value="{{data.email}}">
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Телефон</label>
+                            <input name="phone" class="form-control"  type="text" value="{{data.phone}}">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Серия номер паспорта</label>
+                            <input name="pas_num" class="form-control"  type="text" value="{{data.pas_num}}">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Кто выдал</label>
+                            <input name="pas_take" class="form-control"  type="text" value="{{data.pas_take}}">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Адресс регистрации</label>
+                            <input name="pas_reg"  class="form-control"  type="text" value="{{data.pas_reg}}">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Адресс фактического проживания</label>
+                            <input name="adress" class="form-control"  type="text" value="{{data.adress}}">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Интересы/хобби</label>
+                            <input name="activity" class="form-control"  type="text" value="{{data.activity}}">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Уровень заработной платы</label>
+                            <input name="zp" class="form-control"  type="text" value="{{data.zp}}">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Заказанные туры</label>
+                            <input name="tours" class="form-control"  type="text" value="{{data.tours}}">
+                        </div>
+                <h4 class="mb-3"></h4>
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-success btn-lg" type="submit">Изменить</button>
+                </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2020 ТУР-3</p>
+        </footer>
+    </div>
+</main>
+</body>
+</html>
+
